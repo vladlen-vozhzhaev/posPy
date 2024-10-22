@@ -10,7 +10,7 @@ def receive_message():
         print(response.decode())
 
 def send_message():
-        msg = input("Введите сообщение: ")
+        msg = input()
         client_socket.send(msg.encode())
 
 receive_thread = threading.Thread(target=receive_message)
